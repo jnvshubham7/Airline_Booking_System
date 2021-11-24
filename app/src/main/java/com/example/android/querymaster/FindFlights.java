@@ -33,7 +33,7 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
     EditText ERdestination;
     EditText BTNdate;
     Button Search;
-    String TAG="lawda mera";
+    String TAG="mera flight";
     String date;
     final ArrayList<Flight> ListOfDirectFlights=new ArrayList<>();
     final ArrayList<Flight> ListOfIndirectFlights= new ArrayList<>();
