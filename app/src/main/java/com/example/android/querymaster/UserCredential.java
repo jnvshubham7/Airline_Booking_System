@@ -10,15 +10,7 @@ class UserCredential {
 
 
 
-    //    public UserCredential(String username, String password, String email, int age, int dateOfBirth, int contactNo, Boolean isAdmin) {
-//        Username = username;
-//        Password = password;
-//        Email = email;
-//        Age = age;
-//        DateOfBirth = dateOfBirth;
-//        ContactNo = contactNo;
-//        IsAdmin = isAdmin;
-//    }
+
 
 
     public ArrayList<Booking> getBookedflights() {
@@ -65,18 +57,7 @@ class UserCredential {
         return DateOfBirth;
     }
 
-//    public UserCredential(String username, String password, String email, int age, int dateOfBirth, int contactNo, Boolean isAdmin) {
-//        Username = username;
-//        Password = password;
-//        Email = email;
-//        Age = age;
-//        DateOfBirth = dateOfBirth;
-//        ContactNo = contactNo;
-//        IsAdmin = isAdmin;
-//    }
 
-//    public UserCredential() {
-//    }
 
     public void setDateOfBirth(int dateOfBirth) {
         DateOfBirth = dateOfBirth;

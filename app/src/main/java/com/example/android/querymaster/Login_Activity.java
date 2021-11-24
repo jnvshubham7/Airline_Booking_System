@@ -13,12 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Login_Activity extends AppCompatActivity {
-    /*@Override
-    public void onBackPressed() {
-        Intent returnIntent = new Intent();
-        setResult(Activity.RESULT_CANCELED, returnIntent);
-        System.exit(1);
-    }*/
+  
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Intent.ACTION_MAIN);
