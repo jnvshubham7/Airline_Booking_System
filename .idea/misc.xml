@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_admin.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_booked_flights.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_confirm_booking.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_find_flights.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_login_.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_main.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/activity_signup_.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/bookinglistitem.xml" value="0.3859375" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/SRPS-Flights/app/src/main/res/layout/list_items.xml" value="0.3859375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
