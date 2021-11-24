@@ -84,22 +84,14 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
                 ListOfDirectFlights.addAll(temp);
                 myadapter.notifyDataSetChanged();
 
-//                for(Flight f : ListOfIndirectFlights){
-//                    f=null;
-//                }
+
                 ListOfIndirectFlights.clear();
                 Log.d(TAG, "onClick: Cleared. size is "+ListOfIndirectFlights.size());
                 myadapter1.notifyDataSetChanged();
                 Log.d(TAG, "onClick: fromv is "+fromv+" tov is "+tov);
-//                Log.d(TAG, "onClick: Size of indeirectm ights is "+graph.getIndirectFlights(date, fromv, tov).size());
-//                List<List<Flight>> listoflst=graph.getIndirectFlights(date, fromv, tov);
-//                for(List<Flight> l : listoflst){
-//                    for(Flight lf : l){
-//                        Log.d(TAG, "onClick: Flightd "+lf.getFrom()+" "+lf.getTo()+" "+lf.getCode());
-//                    }
-//                }
+
                 ListOfIndirectFlights.addAll(graph.getModifiedListOfFlights(graph.getIndirectFlights(date, fromv, tov)));
-                //ListOfIndirectFlights.removeAll(ListOfDirectFlights);
+            
                 Log.d(TAG, "onClick: Cleared size is "+ListOfIndirectFlights.size());
                 myadapter1.notifyDataSetChanged();
 
@@ -110,23 +102,7 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
 
     @Override
     public void onItemClicked(final int index) {
-//        new AlertDialog.Builder(this)
-//                .setTitle("Make Booking")
-//                .setMessage("Are you sure you want to Book this flight")
-//                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        // Continue with delete operation
-//                        Booking booking = new Booking(true,ListOfDirectFlights.get(index).getFrom(),ListOfDirectFlights.get(index).getTo(),
-//                                ListOfDirectFlights.get(index).getDateOfJourney(),date,ListOfDirectFlights.get(index).getCost(),
-//                                ListOfDirectFlights.get(index).getDurationOfFlight(),"Paise_hee_paisa",ListOfDirectFlights.get(index).getCode(),ListOfDirectFlights.get(index).getAirlineName(),ListOfDirectFlights.get(index).getStartTime(),
-//                                ListOfDirectFlights.get(index).getEndTime(),1);
-//                        user.getBookedflights().add(booking);
-//
-//                    }
-//                })
-//                .setNegativeButton(android.R.string.no, null)
-//                .setIcon(android.R.drawable.ic_dialog_alert)
-//                .show();
+
         Intent intent = new Intent(FindFlights.this, com.example.android.querymaster.ConfirmBooking.class);
         intent.putExtra("type", "DI");
         intent.putExtra("from", ListOfDirectFlights.get(index).getFrom());
@@ -143,23 +119,7 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
 
     @Override
     public void onItemClicked1(final int index) {
-//        new AlertDialog.Builder(this)
-//                .setTitle("Make Booking")
-//                .setMessage("Are you sure you want to Book this flight")
-//                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        // Continue with delete operation
-//                            Booking booking = new Booking(true,ListOfIndirectFlights.get(index).getFrom(),ListOfIndirectFlights.get(index).getTo(),
-//                                    ListOfIndirectFlights.get(index).getDateOfJourney(),date,ListOfIndirectFlights.get(index).getCost(),
-//                                    ListOfIndirectFlights.get(index).getDurationOfFlight(),"Paise_hee_paisa",ListOfIndirectFlights.get(index).getCode(),
-//                                    ListOfIndirectFlights.get(index).getAirlineName(),ListOfIndirectFlights.get(index).getStartTime(),
-//                                    ListOfIndirectFlights.get(index).getEndTime(),1);
-//                            user.getBookedflights().add(booking);
-//                    }
-//                })
-//                .setNegativeButton(android.R.string.no, null)
-//                .setIcon(android.R.drawable.ic_dialog_alert)
-//                .show();
+
 
         Intent intent = new Intent(FindFlights.this, com.example.android.querymaster.ConfirmBooking.class);
         intent.putExtra("type", "IND");
