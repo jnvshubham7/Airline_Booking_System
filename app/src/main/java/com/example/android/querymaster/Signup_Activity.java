@@ -34,7 +34,7 @@ public class Signup_Activity extends AppCompatActivity {
                     Toast.makeText(Signup_Activity.this, "User already exists, Please use another name.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    User_Credential user1 = new Customer(Username, pwd, email, age, 6969, 94250);
+                    User_Credential user1 = new Customer(Username, pwd, email, age, 141120, 629936005);
                     RegUsers.put(Username, user1);
                     Intent intent = new Intent(Signup_Activity.this, com.example.android.querymaster.Login_Activity.class);
                     startActivity(intent);
