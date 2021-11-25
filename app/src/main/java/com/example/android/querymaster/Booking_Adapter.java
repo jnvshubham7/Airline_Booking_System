@@ -68,8 +68,8 @@ public class Booking_Adapter extends RecyclerView.Adapter<Booking_Adapter.ViewHo
         viewHolder.TVsource.setText("Source: "+user.getBookedflights().get(i).getFromVertex());
         viewHolder.TVdestination.setText("Dest: "+user.getBookedflights().get(i).getToVertex());
         viewHolder.TVduration.setText("Time: "+user.getBookedflights().get(i).getDuration() + " hr");
-        viewHolder.TVdeparture.setText("Depart: "+user.getBookedflights().get(i).getDeparture() +" hr");
-        viewHolder.TVarrival.setText("Arri: "+user.getBookedflights().get(i).getArrival() + " hr");
+        viewHolder.TVdeparture.setText("Depart: "+user.getBookedflights().get(i).getDeparture() +" PM");
+        viewHolder.TVarrival.setText("Arri: "+user.getBookedflights().get(i).getArrival() + " PM");
         viewHolder.TVcost.setText("Cost: Rs."+user.getBookedflights().get(i).getFare()+"");
         viewHolder.TVDOJ.setText("DOJ: "+user.getBookedflights().get(i).getDateOfJourney());
         String s;

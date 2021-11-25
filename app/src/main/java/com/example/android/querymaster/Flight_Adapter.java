@@ -61,8 +61,8 @@ public class Flight_Adapter extends RecyclerView.Adapter<Flight_Adapter.ViewHold
         viewHolder.TVsource.setText("Source: "+directflights.get(i).getFrom());
         viewHolder.TVdestination.setText("Dest: "+directflights.get(i).getTo());
         viewHolder.TVduration.setText("Time: "+directflights.get(i).getDurationOfFlight() + " hr");
-        viewHolder.TVdeparture.setText("Depart: "+directflights.get(i).getStartTime() + " hr");
-        viewHolder.TVarrival.setText("Arri: "+directflights.get(i).getEndTime() + " hr");
+        viewHolder.TVdeparture.setText("Depart: "+directflights.get(i).getStartTime() + " PM");
+        viewHolder.TVarrival.setText("Arri: "+directflights.get(i).getEndTime() + " PM");
         viewHolder.TVcost.setText("Cost: Rs."+directflights.get(i).getCost()+"");
     }
 
