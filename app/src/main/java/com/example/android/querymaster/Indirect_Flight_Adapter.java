@@ -61,8 +61,8 @@ public class Indirect_Flight_Adapter extends RecyclerView.Adapter<Indirect_Fligh
         viewHolder.TVsource.setText("Source: "+indirectflights.get(i).getFrom());
         viewHolder.TVdestination.setText("Dest: "+indirectflights.get(i).getTo());
         viewHolder.TVduration.setText("Time: "+indirectflights.get(i).getDurationOfFlight()+" hr");
-        viewHolder.TVdeparture.setText(" Depart:"+indirectflights.get(i).getStartTime()+" hr");
-        viewHolder.TVarrival.setText("Arri: "+indirectflights.get(i).getEndTime()+" hr");
+        viewHolder.TVdeparture.setText(" Depart:"+indirectflights.get(i).getStartTime()+" PM");
+        viewHolder.TVarrival.setText("Arri: "+indirectflights.get(i).getEndTime()+" PM");
         viewHolder.TVcost.setText("Cost: Rs."+indirectflights.get(i).getCost()+"");
     }
 
