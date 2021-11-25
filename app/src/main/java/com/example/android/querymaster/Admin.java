@@ -1,8 +1,8 @@
 package com.example.android.querymaster;
 
-import static com.example.android.querymaster.MainActivity.graph;
+import static com.example.android.querymaster.Main_Activity.graph;
 
-public class Admin extends UserCredential {
+public class Admin extends User_Credential {
 
     public Admin(String username, String password, String email, int age, int dateOfBirth, int contactNo, Boolean isAdmin) {
         Username = username;

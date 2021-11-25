@@ -1,9 +1,7 @@
 package com.example.android.querymaster;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,15 +9,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static com.example.android.querymaster.MainActivity.graph;
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.graph;
 
 
-public class FindFlights extends AppCompatActivity implements FlightAdapter.itemclicked, IndirectFlightAdapter.itemclicked1{
+public class Find_Flights extends AppCompatActivity implements Flight_Adapter.itemclicked, Indirect_Flight_Adapter.itemclicked1{
 
     RecyclerView recyclerview;
     RecyclerView.Adapter myadapter;
@@ -63,10 +59,10 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
         Search=findViewById(R.id.button5);
 
 
-        myadapter = new FlightAdapter(FindFlights.this,ListOfDirectFlights);
+        myadapter = new Flight_Adapter(Find_Flights.this,ListOfDirectFlights);
         recyclerview.setAdapter(myadapter);
 
-        myadapter1= new IndirectFlightAdapter(FindFlights.this,ListOfIndirectFlights);
+        myadapter1= new Indirect_Flight_Adapter(Find_Flights.this,ListOfIndirectFlights);
         recyclerview1.setAdapter(myadapter1);
 
         Search.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +99,7 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
     @Override
     public void onItemClicked(final int index) {
 
-        Intent intent = new Intent(FindFlights.this, com.example.android.querymaster.ConfirmBooking.class);
+        Intent intent = new Intent(Find_Flights.this, Confirm_Booking.class);
         intent.putExtra("type", "DI");
         intent.putExtra("from", ListOfDirectFlights.get(index).getFrom());
         intent.putExtra("to",ListOfDirectFlights.get(index).getTo());
@@ -121,7 +117,7 @@ public class FindFlights extends AppCompatActivity implements FlightAdapter.item
     public void onItemClicked1(final int index) {
 
 
-        Intent intent = new Intent(FindFlights.this, com.example.android.querymaster.ConfirmBooking.class);
+        Intent intent = new Intent(Find_Flights.this, Confirm_Booking.class);
         intent.putExtra("type", "IND");
         intent.putExtra("from", ListOfIndirectFlights.get(index).getFrom());
         intent.putExtra("to",ListOfIndirectFlights.get(index).getTo());

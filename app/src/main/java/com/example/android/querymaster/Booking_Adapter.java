@@ -11,19 +11,19 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.user;
 
-public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.ViewHolder> {
+public class Booking_Adapter extends RecyclerView.Adapter<Booking_Adapter.ViewHolder> {
 
 
-    BookingAdapter.itemclicked2 activity;
+    Booking_Adapter.itemclicked2 activity;
     private ArrayList<Booking> bookings;
 
     public interface itemclicked2{
         void onItemClicked2(int indexOf);
     }
 
-    public BookingAdapter(Context context, ArrayList<Booking> flights){
+    public Booking_Adapter(Context context, ArrayList<Booking> flights){
         bookings=flights;
         activity=(itemclicked2)context;
     }
@@ -56,13 +56,13 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.ViewHold
 
     @NonNull
     @Override
-    public BookingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public Booking_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.bookinglistitem,viewGroup,false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookingAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull Booking_Adapter.ViewHolder viewHolder, int i) {
         viewHolder.itemView.setTag(user.getBookedflights().get(i));
         viewHolder.TVairlinename.setText(user.getBookedflights().get(i).getAirline());
         viewHolder.TVsource.setText("Source: "+user.getBookedflights().get(i).getFromVertex());

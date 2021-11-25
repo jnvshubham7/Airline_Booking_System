@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,10 +13,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.android.querymaster.MainActivity.graph;
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.graph;
+import static com.example.android.querymaster.Main_Activity.user;
 
-public class ConfirmBooking extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Confirm_Booking extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     int NoOfPassengers;
@@ -47,7 +46,7 @@ public class ConfirmBooking extends AppCompatActivity implements AdapterView.OnI
         OKAY=findViewById(R.id.button6);
         CANCEL=findViewById(R.id.button4);
         String[] spinnerBatchlist={"1","2","3","4","5","6"};
-        ArrayAdapter<String> spinnerBatchAdapter= new ArrayAdapter<>(ConfirmBooking.this, android.R.layout.simple_list_item_1,spinnerBatchlist);
+        ArrayAdapter<String> spinnerBatchAdapter= new ArrayAdapter<>(Confirm_Booking.this, android.R.layout.simple_list_item_1,spinnerBatchlist);
         spinnerBatchAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(spinnerBatchAdapter);
         spinner.setOnItemSelectedListener(this);
@@ -63,11 +62,11 @@ public class ConfirmBooking extends AppCompatActivity implements AdapterView.OnI
                             ET,NoOfPassengers);
                     user.getBookedflights().add(booking);
 
-                    Toast.makeText(ConfirmBooking.this, "Booked. हमारी सेवा का प्रयोग करने के लिए धन्यवाद|", Toast.LENGTH_SHORT).show();
-                    ConfirmBooking.this.finish();
+                    Toast.makeText(Confirm_Booking.this, "Booked. हमारी सेवा का प्रयोग करने के लिए धन्यवाद|", Toast.LENGTH_SHORT).show();
+                    Confirm_Booking.this.finish();
                 }
                 else {
-                    new AlertDialog.Builder(ConfirmBooking.this)
+                    new AlertDialog.Builder(Confirm_Booking.this)
                             .setTitle("Seat Unavailable")
                 .setMessage("The asked no of seats are not available. Please look for alternative flight.")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -86,7 +85,7 @@ public class ConfirmBooking extends AppCompatActivity implements AdapterView.OnI
         CANCEL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ConfirmBooking.this.finish();
+                Confirm_Booking.this.finish();
             }
         });
     }

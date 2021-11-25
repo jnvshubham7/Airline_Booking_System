@@ -1,6 +1,6 @@
 package com.example.android.querymaster;
-import static com.example.android.querymaster.MainActivity.RegUsers;
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.RegUsers;
+import static com.example.android.querymaster.Main_Activity.user;
 
 import android.content.Intent;
 import android.os.Build;

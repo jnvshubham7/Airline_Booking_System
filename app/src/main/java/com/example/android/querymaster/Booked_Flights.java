@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static com.example.android.querymaster.MainActivity.graph;
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.graph;
+import static com.example.android.querymaster.Main_Activity.user;
 
-public class BookedFlights extends AppCompatActivity implements BookingAdapter.itemclicked2 {
+public class Booked_Flights extends AppCompatActivity implements Booking_Adapter.itemclicked2 {
 
 
     RecyclerView recyclerview;
@@ -33,7 +33,7 @@ public class BookedFlights extends AppCompatActivity implements BookingAdapter.i
         recyclerview.setHasFixedSize(true);
         recyclerview.setAdapter(myadapter);
 
-        myadapter = new BookingAdapter(BookedFlights.this, ListOfBooking);
+        myadapter = new Booking_Adapter(Booked_Flights.this, ListOfBooking);
         recyclerview.setAdapter(myadapter);
     }
 
@@ -51,7 +51,7 @@ public class BookedFlights extends AppCompatActivity implements BookingAdapter.i
                             user.getBookedflights().get(indexOf).setBooked(Boolean.FALSE);
                             graph.cancelTicket(new Flight(user.getBookedflights().get(indexOf).getFlightCode(), "asd", user.getBookedflights().get(indexOf).getFromVertex(), "asd", "asd", "asd", "asd", 0, "asd"), user.getBookedflights().get(indexOf).getDateOfJourney(), user.getBookedflights().get(indexOf).getNoOfPassengers());
                             myadapter.notifyDataSetChanged();
-                            Toast.makeText(BookedFlights.this, "Cancelled", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Booked_Flights.this, "Cancelled", Toast.LENGTH_SHORT).show();
 
                         }
                     })

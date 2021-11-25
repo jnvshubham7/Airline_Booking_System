@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConfirmBooking"></activity>
-        <activity android:name=".BookedFlights" />
-        <activity android:name=".AdminAct" />
-        <activity android:name=".FindFlights" />
+        <activity android:name=".Confirm_Booking"></activity>
+        <activity android:name=".Booked_Flights" />
+        <activity android:name=".Admin_Act" />
+        <activity android:name=".Find_Flights" />
         <activity android:name=".Signup_Activity" />
         <activity android:name=".Login_Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

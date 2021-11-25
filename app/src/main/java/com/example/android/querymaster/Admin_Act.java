@@ -7,9 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.user;
 
-public class AdminAct extends AppCompatActivity {
+public class Admin_Act extends AppCompatActivity {
 
 
     EditText ETFlightCode,ETFlightname, ETfrom, ETto, ETdeparture, ETarrival, ETcost, ETdate, ETAIrportname, ETAirportcode;
@@ -38,7 +38,7 @@ public class AdminAct extends AppCompatActivity {
                 String name=ETAIrportname.getText().toString();
                 String code= ETAirportcode.getText().toString();
                 ((Admin)user).addNewAirport(name,code);
-                Toast.makeText(AdminAct.this, "Airport Added!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Admin_Act.this, "Airport Added!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -54,7 +54,7 @@ public class AdminAct extends AppCompatActivity {
                 int cost=Integer.parseInt(ETcost.getText().toString());
                 String date=ETdate.getText().toString();
                 ((Admin)user).addNewFlight(flightcode,flightname,from,to,arrival-departure+"",departure+"",arrival+"",cost,date);
-                Toast.makeText(AdminAct.this, "Flight Added!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Admin_Act.this, "Flight Added!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -70,7 +70,7 @@ public class AdminAct extends AppCompatActivity {
                 int cost=Integer.parseInt(ETcost.getText().toString());
                 String date=ETdate.getText().toString();
                 ((Admin)user).deleteFlight(flightcode,flightname,from,to,departure-arrival+"",departure+"",arrival+"",cost,date);
-                Toast.makeText(AdminAct.this, "Flight Deleted!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Admin_Act.this, "Flight Deleted!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -80,7 +80,7 @@ public class AdminAct extends AppCompatActivity {
                 String name=ETAIrportname.getText().toString();
                 String code= ETAirportcode.getText().toString();
                 ((Admin)user).deleteAirport(name,code);
-                Toast.makeText(AdminAct.this, "Airport Deleted!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Admin_Act.this, "Airport Deleted!", Toast.LENGTH_SHORT).show();
             }
         });
 

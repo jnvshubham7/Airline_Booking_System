@@ -8,8 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static com.example.android.querymaster.MainActivity.RegUsers;
-import static com.example.android.querymaster.MainActivity.user;
+import static com.example.android.querymaster.Main_Activity.RegUsers;
 
 public class Signup_Activity extends AppCompatActivity {
 
@@ -35,7 +34,7 @@ public class Signup_Activity extends AppCompatActivity {
                     Toast.makeText(Signup_Activity.this, "User already exists, Please use another name.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    UserCredential user1 = new Customer(Username, pwd, email, age, 6969, 94250);
+                    User_Credential user1 = new Customer(Username, pwd, email, age, 6969, 94250);
                     RegUsers.put(Username, user1);
                     Intent intent = new Intent(Signup_Activity.this, com.example.android.querymaster.Login_Activity.class);
                     startActivity(intent);

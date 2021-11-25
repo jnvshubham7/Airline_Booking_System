@@ -1,10 +1,8 @@
 package com.example.android.querymaster;
 
-import android.net.wifi.hotspot2.pps.Credential;
-
 import java.util.ArrayList;
 
-class Customer extends UserCredential {
+class Customer extends User_Credential {
 
     ArrayList<Booking> UserBooking = new ArrayList<>();
 

@@ -3,28 +3,25 @@ package com.example.android.querymaster;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.android.querymaster.R;
-
 import java.util.ArrayList;
 
-public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder> {
+public class Indirect_Flight_Adapter extends RecyclerView.Adapter<Indirect_Flight_Adapter.ViewHolder> {
 
 
-    FlightAdapter.itemclicked activity;
-    private ArrayList<Flight> directflights;
-    public interface itemclicked{
-        void onItemClicked(int index);
+    Indirect_Flight_Adapter.itemclicked1 activity;
+    private ArrayList<Flight> indirectflights;
+    public interface itemclicked1{
+        void onItemClicked1(int indexOf);
     }
 
-    public FlightAdapter(Context context, ArrayList<Flight> flights){
-        directflights=flights;
-        activity=(itemclicked)context;
+    public Indirect_Flight_Adapter(Context context, ArrayList<Flight> flights){
+        indirectflights=flights;
+        activity=(itemclicked1)context;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -44,7 +41,7 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    activity.onItemClicked(directflights.indexOf((Flight)itemView.getTag()));
+                    activity.onItemClicked1(indirectflights.indexOf((Flight)itemView.getTag()));
                 }
             });
         }
@@ -52,25 +49,25 @@ public class FlightAdapter extends RecyclerView.Adapter<FlightAdapter.ViewHolder
 
     @NonNull
     @Override
-    public FlightAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public Indirect_Flight_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_items,viewGroup,false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FlightAdapter.ViewHolder viewHolder, int i) {
-        viewHolder.itemView.setTag(directflights.get(i));
-        viewHolder.TVairlinename.setText(directflights.get(i).getAirlineName());
-        viewHolder.TVsource.setText("Source: "+directflights.get(i).getFrom());
-        viewHolder.TVdestination.setText("Dest: "+directflights.get(i).getTo());
-        viewHolder.TVduration.setText("Time: "+directflights.get(i).getDurationOfFlight() + " hr");
-        viewHolder.TVdeparture.setText("Depart: "+directflights.get(i).getStartTime() + " hr");
-        viewHolder.TVarrival.setText("Arri: "+directflights.get(i).getEndTime() + " hr");
-        viewHolder.TVcost.setText("Cost: Rs."+directflights.get(i).getCost()+"");
+    public void onBindViewHolder(@NonNull Indirect_Flight_Adapter.ViewHolder viewHolder, int i) {
+        viewHolder.itemView.setTag(indirectflights.get(i));
+        viewHolder.TVairlinename.setText(indirectflights.get(i).getAirlineName());
+        viewHolder.TVsource.setText("Source: "+indirectflights.get(i).getFrom());
+        viewHolder.TVdestination.setText("Dest: "+indirectflights.get(i).getTo());
+        viewHolder.TVduration.setText("Time: "+indirectflights.get(i).getDurationOfFlight()+" hr");
+        viewHolder.TVdeparture.setText(" Depart:"+indirectflights.get(i).getStartTime()+" hr");
+        viewHolder.TVarrival.setText("Arri: "+indirectflights.get(i).getEndTime()+" hr");
+        viewHolder.TVcost.setText("Cost: Rs."+indirectflights.get(i).getCost()+"");
     }
 
     @Override
     public int getItemCount() {
-        return directflights.size();
+        return indirectflights.size();
     }
 }

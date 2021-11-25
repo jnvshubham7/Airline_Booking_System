@@ -2,7 +2,7 @@ package com.example.android.querymaster;
 
 import java.util.ArrayList;
 
-class UserCredential {
+class User_Credential {
     String Username, Password, Email;
     int Age,DateOfBirth, ContactNo;
     Boolean IsAdmin;

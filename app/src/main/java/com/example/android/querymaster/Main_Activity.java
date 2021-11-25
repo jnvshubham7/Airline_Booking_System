@@ -1,9 +1,6 @@
 package com.example.android.querymaster;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.wifi.hotspot2.pps.Credential;
-import android.os.UserHandle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class Main_Activity extends AppCompatActivity {
 
     //request codes for ActivityResult
     private static final int RC_SIGN_IN = 1;
@@ -26,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
     Map<String, List<Edge>> MapOfEdges = graph.getGraph();
     Map<String, Vertex> ListOfVertices = graph.getMapOfVertices();
     Button BTNSearch,BTNadmin,BTNbookings,BTNlogout;
-    public static HashMap<String ,UserCredential> RegUsers= new HashMap<>();
-    public static UserCredential user;
+    public static HashMap<String , User_Credential> RegUsers= new HashMap<>();
+    public static User_Credential user;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RegUsers.put("test1",new Admin("test1","123456","techodope@gmail.com",69,696969,6967,true));
-        RegUsers.put("test2",new Admin("test2","123456","techodope@gmail.com",69,696969,6967,false));
+        RegUsers.put("test1",new Admin("test1","123456","jnvshubham7@gmail.com",21,141120,629936005,true));
+        RegUsers.put("test2",new Admin("test2","123456","jnvshubham7@gmail.com",21,141120,629936005,false));
         {
             //addind dummy data
             graph.addNewAirport(new Vertex("Mumbai", "MUM"));
@@ -71,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if(!LoggedIn) {
-            Intent intent = new Intent(MainActivity.this, com.example.android.querymaster.Login_Activity.class);
+            Intent intent = new Intent(Main_Activity.this, com.example.android.querymaster.Login_Activity.class);
             startActivityForResult(intent, RC_SIGN_IN);
         }
         BTNSearch=findViewById(R.id.button);
         BTNSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.example.android.querymaster.FindFlights.class);
+                Intent intent = new Intent(Main_Activity.this, Find_Flights.class);
                 startActivity(intent);
             }
         });
@@ -88,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(user.IsAdmin) {
-                    Intent intent = new Intent(MainActivity.this, com.example.android.querymaster.AdminAct.class);
+                    Intent intent = new Intent(Main_Activity.this, Admin_Act.class);
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Sorry, only Admins can access this feature.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main_Activity.this, "Sorry, only Admins can access this feature.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -101,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         BTNbookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.example.android.querymaster.BookedFlights.class);
+                Intent intent = new Intent(Main_Activity.this, Booked_Flights.class);
                 startActivity(intent);
             }
         });
@@ -110,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         BTNlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.example.android.querymaster.Login_Activity.class);
+                Intent intent = new Intent(Main_Activity.this, com.example.android.querymaster.Login_Activity.class);
                 startActivity(intent);
             }
         });
