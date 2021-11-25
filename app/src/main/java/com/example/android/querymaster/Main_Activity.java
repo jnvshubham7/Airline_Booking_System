@@ -31,8 +31,8 @@ public class Main_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RegUsers.put("test1",new Admin("test1","123456","jnvshubham7@gmail.com",21,141120,629936005,true));
-        RegUsers.put("test2",new Admin("test2","123456","jnvshubham7@gmail.com",21,141120,629936005,false));
+        RegUsers.put("test1",new Admin("test1","123456","jnvshubham7@gmail.com",21,141100,629936005,true));
+        RegUsers.put("test2",new Admin("test2","123456","jnvshubham7@gmail.com",21,141100,629936005,false));
         {
             //addind dummy data
             graph.addNewAirport(new Vertex("Mumbai", "MUM"));
