@@ -18,7 +18,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
 
         Handler handler = new Handler();
         Runnable runnable = () -> {
-            Intent intent = new Intent(Splash_Screen_Activity.this, Login_Activity.class);
+            Intent intent = new Intent(Splash_Screen_Activity.this, Main_Activity.class);
             startActivity(intent);
         };
         handler.postDelayed(runnable, 500);

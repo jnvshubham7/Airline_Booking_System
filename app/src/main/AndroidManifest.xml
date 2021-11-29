@@ -15,8 +15,8 @@
         <activity android:name=".Find_Flights" />
         <activity android:name=".Signup_Activity" />
         <activity android:name=".Login_Activity" />
-        <activity android:name=".Splash_Screen_Activity" />
-        <activity android:name=".Main_Activity">
+        <activity android:name=".Main_Activity" />
+        <activity android:name=".Splash_Screen_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
