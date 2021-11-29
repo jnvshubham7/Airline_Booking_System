@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "818936952040",
+    "project_id": "airline-booking-system-97779",
+    "storage_bucket": "airline-booking-system-97779.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818936952040:android:2320ff45b8b64bd692455d",
+        "android_client_info": {
+          "package_name": "com.example.android.querymaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818936952040-71vr8clv2l9a70he3t07mc7rklpbe0t3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-ngilETYiZFaY4wWgx2OVcMuzW0kxojY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818936952040-71vr8clv2l9a70he3t07mc7rklpbe0t3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
