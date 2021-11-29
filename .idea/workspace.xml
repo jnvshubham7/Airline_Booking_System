@@ -13,7 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b875238f-d514-4ca9-beb0-87f632ac3876" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booked_flights.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booked_flights.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bookinglistitem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bookinglistitem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_items.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638198705463</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update">
+      <created>1638199069835</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638199069835</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
