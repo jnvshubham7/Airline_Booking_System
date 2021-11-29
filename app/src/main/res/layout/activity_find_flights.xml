@@ -4,61 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#224662"
+    android:background="@color/colorPrimary"
     tools:context=".Find_Flights">
 
     <EditText
         android:id="@+id/ETsource"
         android:layout_width="204dp"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
+        android:padding="14dp"
+        android:background="@drawable/edittext_border"
         android:gravity="left"
         android:hint="Source"
         android:inputType="textPersonName"
-        android:textColor="#FDFDFE"
-        android:textColorHint="#FFFFFF"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ETdestination"
         android:layout_width="204dp"
-        android:layout_height="41dp"
+      android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
-        android:gravity="left"
+        android:padding="14dp"
+        android:background="@drawable/edittext_border"
+
         android:hint="Destination"
         android:inputType="textPersonName"
-        android:textColor="#FDFDFE"
-        android:textColorHint="#FFFFFF"
+
         app:layout_constraintBottom_toBottomOf="@+id/ETsource"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ETsource" />
 
     <EditText
         android:id="@+id/date"
-        android:layout_width="0dp"
+        android:layout_width="284dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
         android:hint="dd:mm:yyyy"
-        android:textColor="#FDFDFE"
-        android:textColorHint="#FDFDFE"
+        android:gravity="center"
+
+        android:padding="14dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ETdestination" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#22A6CB"
-        android:layout_marginTop="10dp"
+        android:layout_width="172dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+
+        android:background="#009688"
         android:text="@android:string/search_go"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
@@ -66,11 +72,13 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
         android:text="Direct Flights"
 
-        android:textColor="#FDFDFE"
+        android:textColor="@color/btn_register"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -89,9 +97,11 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:text="Indirect Flights"
-        android:textColor="#FDFDFE"
-      android:layout_marginStart="5dp"
+        android:textColor="#FF5722"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/indirectflights"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

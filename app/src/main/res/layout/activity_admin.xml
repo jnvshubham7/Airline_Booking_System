@@ -11,12 +11,13 @@
     <EditText
         android:id="@+id/ETcode"
         android:layout_width="0dp"
+        android:padding="14dp"
         android:background="@drawable/edittext_border"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="code"
         android:layout_marginTop="50dp"
-        android:padding="14dp"
+
 
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/ETairline"
