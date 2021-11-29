@@ -21,6 +21,7 @@ public class Signup_Activity extends AppCompatActivity {
         final EditText ETemail=findViewById(R.id.ETemail);
         final EditText ETage=findViewById(R.id.ETage);
         final EditText ETcontactno=findViewById(R.id.ETcontactno);
+        Button BTNsignin = findViewById(R.id.BTNSignIn);
         Button BTNregister=findViewById(R.id.BTNregister);
         BTNregister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,15 @@ public class Signup_Activity extends AppCompatActivity {
                     startActivity(intent);
                     Signup_Activity.this.finish();
                 }
+            }
+        });
+
+        BTNsignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Signup_Activity.this,Login_Activity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
