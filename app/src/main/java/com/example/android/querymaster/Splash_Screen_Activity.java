@@ -13,6 +13,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+      //  getSupportActionBar().hide();
         setContentView(R.layout.activity_splash_screen);
 
         Handler handler = new Handler();

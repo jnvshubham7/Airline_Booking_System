@@ -25,6 +25,7 @@ public class Login_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+      //  getSupportActionBar().hide();
         setContentView(R.layout.activity_login_);
         final EditText ETusername=findViewById(R.id.ETusername);
         final EditText ETpassword=findViewById(R.id.ETpassword);
