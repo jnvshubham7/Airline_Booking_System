@@ -1,115 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#224662"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
     tools:context=".Login_Activity">
 
-    <EditText
-        android:id="@+id/ETusername"
-        android:layout_width="164dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="296dp"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:gravity="left"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:textColor="#FDFDFE"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="14dp"
+        app:cardCornerRadius="4dp"
+        android:layout_marginRight="14dp">
 
-    <EditText
-        android:id="@+id/ETpassword"
-        android:layout_width="164dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:gravity="left"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:textColor="#FDFDFE"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETusername"
-        app:layout_constraintVertical_bias="0.033" />
 
-    <ImageView
-        android:id="@+id/IVlogo"
-        android:layout_width="217dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ETusername"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/icon" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/BTNregister"
-        android:layout_width="217dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="#22A6CB"
-        android:text="Sign in"
-        app:layout_constraintBottom_toTopOf="@+id/BTNsignup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/sign_up_text"
+                android:text="Sign In"
+                android:textSize="24dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="29dp"
+                android:textColor="#515151"/>
 
-    <Button
-        android:id="@+id/BTNsignup"
-        android:layout_width="217dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#22A6CB"
-        android:text="sign up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:id="@+id/ETusername"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@drawable/edittext_border"
+                android:padding="14dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:paddingBottom="14dp"
+                android:drawablePadding="11dp"
+                android:layout_marginBottom="9dp"
+                android:textSize="16dp"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="41dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="296dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ETusername"
-        app:layout_constraintHorizontal_bias="0.893"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_portrait_black_24dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="41dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ETpassword"
-        app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.017"
-        app:srcCompat="@drawable/ic_vpn_key_black_24dp" />
 
-</android.support.constraint.ConstraintLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:id="@+id/ETpassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@drawable/edittext_border"
+                android:padding="14dp"
+                android:drawableStart="@drawable/ic_card_travel_black_24dp"
+                android:drawableLeft="@drawable/ic_card_travel_black_24dp"
+                android:paddingBottom="14dp"
+                android:drawablePadding="11dp"
+                android:textSize="16dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ETcontactno"
+                android:text="Forgot Password ?"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="11dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/BTNregister"
+                android:layout_marginLeft="49dp"
+                android:layout_marginRight="49dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginBottom="9dp"
+                android:text="SIGN IN"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/BTNsignup"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginBottom="11dp"
+                    android:text="Don't have an account?"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
