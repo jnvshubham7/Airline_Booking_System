@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#224662"
+    android:background="@color/gray0"
     tools:context=".Confirm_Booking">
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
         android:text="Confirm your booking"
-        android:textColor="#FCFEFF"
+        android:textColor="@color/btn_register"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Confirm payment method"
-        android:textColor="#FCFEFF"
+        android:textColor="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVtotalcost" />
@@ -42,28 +45,28 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="UPI"
-            android:textColor="#FCFEFF" />
+            android:textColor="#131719" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Debit Card/CreditCard"
-            android:textColor="#FCFEFF" />
+            android:textColor="#111313" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Netbanking"
-            android:textColor="#FCFEFF" />
+            android:textColor="#131415" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Paytm"
-            android:textColor="#FCFEFF" />
+            android:textColor="#141617" />
 
     </RadioGroup>
 
@@ -96,9 +99,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+
+        android:layout_marginTop="100dp"
         android:text="No of Passengers"
-        android:textColor="#FCFEFF"
+        android:textColor="#181C1E"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/spinner"
         app:layout_constraintHorizontal_bias="0.5"
@@ -110,6 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -123,7 +128,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:text="TextView"
-        android:textColor="#FCFEFF"
+        android:textColor="#111517"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />

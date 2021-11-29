@@ -13,4 +13,7 @@
     <color name="btn_login_register">#2196F3</color>
     <color name="btn_register">#0D47A1</color>
     <color name="btn_logut">#03A9F4</color>
+    <color name="gray0">#e1f5fe</color>
+    <color name="gray1">#B3E5FC</color>
+    <color name="gray2">#4FC3F7</color>
 </resources>
