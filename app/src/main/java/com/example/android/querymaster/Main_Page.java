@@ -13,18 +13,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Main_Activity extends AppCompatActivity {
+public class Main_Page extends AppCompatActivity {
 
     //request codes for ActivityResult
     private static final int RC_SIGN_IN = 1;
     Boolean LoggedIn=false;
     String TAG="MyLOGS";
     public static Graph graph = new Graph();
-    Map<String, List<Edge>> MapOfEdges = graph.getGraph();
-    Map<String, Vertex> ListOfVertices = graph.getMapOfVertices();
+    Map<String, List<Route>> MapOfEdges = graph.getGraph();
+    Map<String, Destination> ListOfVertices = graph.getMapOfVertices();
     Button BTNSearch,BTNadmin,BTNbookings,BTNlogout;
-    public static HashMap<String , User_Credential> RegUsers= new HashMap<>();
-    public static User_Credential user;
+    public static HashMap<String , User_Details> RegUsers= new HashMap<>();
+    public static User_Details user;
 
 
     @Override
@@ -35,11 +35,11 @@ public class Main_Activity extends AppCompatActivity {
         RegUsers.put("test2",new Admin("test2","123456","jnvshubham7@gmail.com",21,141100,629936005,false));
         {
             //addind dummy data
-            graph.addNewAirport(new Vertex("Mumbai", "MUM"));
-            graph.addNewAirport(new Vertex("Delhi", "NDLS"));
-            graph.addNewAirport(new Vertex("Kolkata", "KOL"));
-            graph.addNewAirport(new Vertex("Chennai","CHN"));
-            graph.addNewAirport(new Vertex("Bhopal", "BPL"));
+            graph.addNewAirport(new Destination("Mumbai", "MUM"));
+            graph.addNewAirport(new Destination("Delhi", "NDLS"));
+            graph.addNewAirport(new Destination("Kolkata", "KOL"));
+            graph.addNewAirport(new Destination("Chennai","CHN"));
+            graph.addNewAirport(new Destination("Bhopal", "BPL"));
 
             graph.addNewFlight(new Flight("f11", "Vistara", "Mumbai", "Delhi", "2", "1", "3", 1200, "20:11:2021"));
             graph.addNewFlight(new Flight("f12", "Vistara", "Mumbai", "Delhi", "2", "2", "4", 1200, "21:11:2021"));
@@ -68,14 +68,14 @@ public class Main_Activity extends AppCompatActivity {
 
         }
         if(!LoggedIn) {
-            Intent intent = new Intent(Main_Activity.this, com.example.android.querymaster.Login_Activity.class);
+            Intent intent = new Intent(Main_Page.this, com.example.android.querymaster.Login_Activity.class);
             startActivityForResult(intent, RC_SIGN_IN);
         }
         BTNSearch=findViewById(R.id.button);
         BTNSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main_Activity.this, Find_Flights.class);
+                Intent intent = new Intent(Main_Page.this, Find_Flights.class);
                 startActivity(intent);
             }
         });
@@ -85,11 +85,11 @@ public class Main_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(user.IsAdmin) {
-                    Intent intent = new Intent(Main_Activity.this, Admin_Act.class);
+                    Intent intent = new Intent(Main_Page.this, Admin_Act.class);
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(Main_Activity.this, "Sorry, only Admins can access this feature.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main_Page.this, "Sorry, only Admins can access this feature.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -98,7 +98,7 @@ public class Main_Activity extends AppCompatActivity {
         BTNbookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main_Activity.this, Booked_Flights.class);
+                Intent intent = new Intent(Main_Page.this, Booked_Flights.class);
                 startActivity(intent);
             }
         });
@@ -107,7 +107,7 @@ public class Main_Activity extends AppCompatActivity {
         BTNlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main_Activity.this, com.example.android.querymaster.Login_Activity.class);
+                Intent intent = new Intent(Main_Page.this, com.example.android.querymaster.Login_Activity.class);
                 startActivity(intent);
             }
         });

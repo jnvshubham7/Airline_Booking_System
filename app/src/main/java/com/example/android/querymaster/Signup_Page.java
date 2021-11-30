@@ -8,9 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static com.example.android.querymaster.Main_Activity.RegUsers;
+import static com.example.android.querymaster.Main_Page.RegUsers;
 
-public class Signup_Activity extends AppCompatActivity {
+public class Signup_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,14 @@ public class Signup_Activity extends AppCompatActivity {
                 int age=Integer.parseInt(ETage.getText().toString());
                 int contactno=Integer.parseInt(ETcontactno.getText().toString());
                 if(RegUsers.containsKey(Username)){
-                    Toast.makeText(Signup_Activity.this, "User already exists, Please use another name.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Signup_Page.this, "User already exists, Please use another name.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    User_Credential user1 = new Customer(Username, pwd, email, age, 141100, 629936005);
+                    User_Details user1 = new Passenger(Username, pwd, email, age, 141100, 629936005);
                     RegUsers.put(Username, user1);
-                    Intent intent = new Intent(Signup_Activity.this, com.example.android.querymaster.Login_Activity.class);
+                    Intent intent = new Intent(Signup_Page.this, com.example.android.querymaster.Login_Activity.class);
                     startActivity(intent);
-                    Signup_Activity.this.finish();
+                    Signup_Page.this.finish();
                 }
             }
         });
@@ -48,7 +48,7 @@ public class Signup_Activity extends AppCompatActivity {
         BTNsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Signup_Activity.this,Login_Activity.class);
+                Intent intent= new Intent(Signup_Page.this,Login_Activity.class);
                 startActivity(intent);
                 finish();
             }

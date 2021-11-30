@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static com.example.android.querymaster.Main_Activity.user;
+import static com.example.android.querymaster.Main_Page.user;
 
 public class Admin_Act extends AppCompatActivity {
 

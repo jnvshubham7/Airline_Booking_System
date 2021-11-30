@@ -13,8 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.android.querymaster.Main_Activity.graph;
-import static com.example.android.querymaster.Main_Activity.user;
+import static com.example.android.querymaster.Main_Page.graph;
+import static com.example.android.querymaster.Main_Page.user;
 
 public class Confirm_Booking extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

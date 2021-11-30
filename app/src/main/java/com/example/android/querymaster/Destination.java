@@ -1,10 +1,10 @@
 package com.example.android.querymaster;
 
-class Vertex {
+class Destination {
     private String Name;
     private String Code;
 
-    public Vertex(String name, String code) {
+    public Destination(String name, String code) {
         Name = name;
         Code = code;
     }

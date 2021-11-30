@@ -1,12 +1,11 @@
 package com.example.android.querymaster;
-import android.util.Log;
 
 import java.util.*;
 
 
 class Graph {
-    private Map<String, Vertex> MapOfVertices;
-    private Map<String, List<Edge>> graph;
+    private Map<String, Destination> MapOfVertices;
+    private Map<String, List<Route>> graph;
     private String prevTime = "0";
     private String prevDate = "";
     private Map<String, Boolean> isVisited = new TreeMap<>();
@@ -31,7 +30,7 @@ class Graph {
             return;
         }
         if (graph.containsKey(From)) {
-            for (Edge e : graph.get(From)) {
+            for (Route e : graph.get(From)) {
                 if (!isVisited.get(e.getTo())) {
                     for (Flight f : e.getListOfFlights()) {
                         if (!isVisitedFlight.get(f.getCode())) {
@@ -60,7 +59,7 @@ class Graph {
     public List<List<Flight>> getIndirectFlights(String Date, String From, String To) {    // mum,   kol
         ListOfSeriesOfFlights = new ArrayList<>();
         if (graph.containsKey(From)) {
-            for (Edge e : graph.get(From)) {
+            for (Route e : graph.get(From)) {
                 SeriesOfFlights = new ArrayList<>();
                 setVisited();
                 prevTime = "0";
@@ -106,7 +105,7 @@ class Graph {
     public ArrayList<Flight> getDirectFlights(String Date, String From, String To) {
         ArrayList<Flight> list = new ArrayList<>();
         if (graph.containsKey(From)) {
-            for (Edge e : graph.get(From)) {
+            for (Route e : graph.get(From)) {
                 if (e.getTo().compareTo(To) == 0) {
                     for (Flight f:e.getListOfFlights()) {
                         if (f.getDateOfJourney().compareTo(Date)==0 && f.getSeatAvailable() > 0) {
@@ -119,11 +118,11 @@ class Graph {
         return list;
     }
 
-    public Map<String, Vertex> getMapOfVertices() {
+    public Map<String, Destination> getMapOfVertices() {
         return MapOfVertices;
     }
 
-    public Map<String, List<Edge>> getGraph() {
+    public Map<String, List<Route>> getGraph() {
         return graph;
     }
 
@@ -136,7 +135,7 @@ class Graph {
         for (String s:MapOfVertices.keySet()) {
             isVisited.put(s, false);
             if (graph.containsKey(s)) {
-                for (Edge e:graph.get(s)) {
+                for (Route e:graph.get(s)) {
                     for (Flight f:e.getListOfFlights()) {
                         isVisitedFlight.put(f.getCode(), false);
                     }
@@ -145,28 +144,28 @@ class Graph {
         }
     }
 
-    public void addNewEdge(Edge edge) {
-        if (graph.containsKey(edge.getFrom())) {
+    public void addNewEdge(Route route) {
+        if (graph.containsKey(route.getFrom())) {
             int cnt = 0;
-            for (Edge e:graph.get(edge.getFrom())) {
-                if (e.getTo().compareTo(edge.getTo())==0) {
+            for (Route e:graph.get(route.getFrom())) {
+                if (e.getTo().compareTo(route.getTo())==0) {
                     return;
                 }
                 cnt++;
             }
-            if (cnt==graph.get(edge.getFrom()).size()) {
-                graph.get(edge.getFrom()).add(edge);
+            if (cnt==graph.get(route.getFrom()).size()) {
+                graph.get(route.getFrom()).add(route);
             }
         } else {
-            List<Edge> temp = new ArrayList<>();
-            temp.add(edge);
-            graph.put(edge.getFrom(), temp);
+            List<Route> temp = new ArrayList<>();
+            temp.add(route);
+            graph.put(route.getFrom(), temp);
         }
     }
 
     public void addNewFlight(Flight flight) {
-        addNewEdge(new Edge(flight.getFrom(), flight.getTo(), 500, null));
-        for (Edge e : graph.get(flight.getFrom())) {
+        addNewEdge(new Route(flight.getFrom(), flight.getTo(), 500, null));
+        for (Route e : graph.get(flight.getFrom())) {
             if (e.getTo().compareTo(flight.getTo()) == 0) {
                 if (e.getListOfFlights() == null) {
                     ArrayList<Flight> temp = new ArrayList<>();
@@ -181,18 +180,18 @@ class Graph {
         }
     }
 
-    public void addNewAirport(Vertex airport) {
+    public void addNewAirport(Destination airport) {
         MapOfVertices.put(airport.getName(), airport);
     }
 
 
-    public void deleteAirport(Vertex airport) {
+    public void deleteAirport(Destination airport) {
         MapOfVertices.remove(airport.getName());
         if (graph.keySet().contains(airport.getName())) {
             graph.remove(airport.getName());
         }
-        for (List<Edge> le:graph.values()) {
-            for (Edge e:le) {
+        for (List<Route> le:graph.values()) {
+            for (Route e:le) {
                 if (e.getTo().compareTo(airport.getName())==0) {
                     le.remove(e);
                 }
@@ -202,7 +201,7 @@ class Graph {
 
     public void deleteFlight(Flight flight) {
         boolean flag = false;
-        for (Edge e:graph.get(flight.getFrom())) {
+        for (Route e:graph.get(flight.getFrom())) {
             for (Flight f:e.getListOfFlights()) {
                 if (f.getCode().compareTo(flight.getCode())==0) {
                     e.getListOfFlights().remove(f);
@@ -221,8 +220,8 @@ class Graph {
             String words[]=flight.getCode().split(" ");
             for(String s: words){
                 int flag = 0;
-                for(List<Edge>le:graph.values()) {
-                    for (Edge e:le) {
+                for(List<Route>le:graph.values()) {
+                    for (Route e:le) {
                         for (Flight f:e.getListOfFlights()) {
                             if (f.getCode().compareTo(s)==0) {
                                 f.setSeatAvailable(f.getSeatAvailable() - NumberOfPassengers);
@@ -240,7 +239,7 @@ class Graph {
                 }
             }
         } else {
-            for (Edge e : graph.get(flight.getFrom())) {
+            for (Route e : graph.get(flight.getFrom())) {
                 for (Flight f : e.getListOfFlights()) {
                     if (f.getCode().compareTo(flight.getCode()) == 0) {
                         if (f.getSeatAvailable() - NumberOfPassengers > 0) {
@@ -261,8 +260,8 @@ class Graph {
             String[] words = flight.getCode().split(" ");
             for(String s: words){
                 int flag = 0;
-                for(List<Edge>le:graph.values()) {
-                    for (Edge e:le) {
+                for(List<Route>le:graph.values()) {
+                    for (Route e:le) {
                         for (Flight f:e.getListOfFlights()) {
                             if (f.getCode().compareTo(s)==0) {
                                 f.setSeatAvailable(f.getSeatAvailable() + NumberOfPassengers);
@@ -281,7 +280,7 @@ class Graph {
             }
         } else {
             int flag = 0;
-            for (Edge e : graph.get(flight.getFrom())) {
+            for (Route e : graph.get(flight.getFrom())) {
                 for (Flight f : e.getListOfFlights()) {
                     if (f.getCode().compareTo(flight.getCode()) == 0) {
                         f.setSeatAvailable(f.getSeatAvailable() + NumberOfPassengers);

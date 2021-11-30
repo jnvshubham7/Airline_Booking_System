@@ -3,13 +3,13 @@ package com.example.android.querymaster;
 import java.util.ArrayList;
 import java.util.List;
 
-class Edge {
+class Route {
     private String From;
     private String To;
     private int distance;
     private ArrayList<Flight> ListOfFlights = new ArrayList<>();
 
-    public Edge(String from, String to, int distance, ArrayList<Flight> listOfFlights) {
+    public Route(String from, String to, int distance, ArrayList<Flight> listOfFlights) {
         From = from;
         To = to;
         this.distance = distance;

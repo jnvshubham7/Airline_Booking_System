@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static com.example.android.querymaster.Main_Activity.graph;
-import static com.example.android.querymaster.Main_Activity.user;
+import static com.example.android.querymaster.Main_Page.graph;
+import static com.example.android.querymaster.Main_Page.user;
 
 public class Booked_Flights extends AppCompatActivity implements Booking_Adapter.itemclicked2 {
 

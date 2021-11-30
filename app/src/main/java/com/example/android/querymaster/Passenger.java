@@ -2,11 +2,11 @@ package com.example.android.querymaster;
 
 import java.util.ArrayList;
 
-class Customer extends User_Credential {
+class Passenger extends User_Details {
 
     ArrayList<Booking> UserBooking = new ArrayList<>();
 
-    public Customer(String username, String password, String email, int age, int dateOfBirth, int contactNo) {
+    public Passenger(String username, String password, String email, int age, int dateOfBirth, int contactNo) {
         Username = username;
         Password = password;
         Email = email;

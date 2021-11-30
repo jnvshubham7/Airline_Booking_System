@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static com.example.android.querymaster.Main_Activity.user;
+import static com.example.android.querymaster.Main_Page.user;
 
 public class Booking_Adapter extends RecyclerView.Adapter<Booking_Adapter.ViewHolder> {
 

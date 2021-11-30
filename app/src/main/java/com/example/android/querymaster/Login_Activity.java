@@ -1,6 +1,6 @@
 package com.example.android.querymaster;
-import static com.example.android.querymaster.Main_Activity.RegUsers;
-import static com.example.android.querymaster.Main_Activity.user;
+import static com.example.android.querymaster.Main_Page.RegUsers;
+import static com.example.android.querymaster.Main_Page.user;
 
 import android.content.Intent;
 import android.os.Build;
@@ -57,7 +57,7 @@ public class Login_Activity extends AppCompatActivity {
         BTNsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Login_Activity.this,com.example.android.querymaster.Signup_Activity.class);
+                Intent intent= new Intent(Login_Activity.this, Signup_Page.class);
                 startActivity(intent);
             }
         });

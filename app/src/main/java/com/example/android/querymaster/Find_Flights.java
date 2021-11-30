@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
-import static com.example.android.querymaster.Main_Activity.graph;
+import static com.example.android.querymaster.Main_Page.graph;
 
 
 public class Find_Flights extends AppCompatActivity implements Flight_Adapter.itemclicked, Indirect_Flight_Adapter.itemclicked1{
