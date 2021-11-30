@@ -12,33 +12,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b875238f-d514-4ca9-beb0-87f632ac3876" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Admin_Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Admin_Act.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Booked_Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Booked_Flights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Booking_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Booking_Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Confirm_Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Confirm_Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Find_Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Find_Flights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Login_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Login_Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Main_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Main_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Signup_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Signup_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Splash_Screen_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Splash_Screen_Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/User_Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/User_Details.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/querymaster/Destination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_signup_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_signup_.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b875238f-d514-4ca9-beb0-87f632ac3876" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
