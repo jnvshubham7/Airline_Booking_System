@@ -80,7 +80,7 @@
                 android:background="@drawable/edittext_border"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:drawableStart="@drawable/ic_card_travel_black_24dp"
-                android:drawableLeft="@drawable/ic_card_travel_black_24dp"
+
                 android:paddingBottom="14dp"
                 android:layout_marginBottom="9dp"
                 android:drawablePadding="11dp"
@@ -96,13 +96,33 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginRight="9dp"
                 android:id="@+id/ETage"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
+                android:hint="Age"
+                android:inputType="number"
+
                 android:padding="14dp"
                 android:background="@drawable/edittext_border"
                 android:textCursorDrawable="@drawable/color_cursor"
-                android:drawableStart="@drawable/ic_card_travel_black_24dp"
-                android:drawableLeft="@drawable/ic_card_travel_black_24dp"
+                android:drawableStart="@drawable/ic_data_usage_black_24dp"
+
+                android:paddingBottom="14dp"
+                android:drawablePadding="11dp"
+                android:textSize="16dp"
+                android:layout_marginTop="9dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:id="@+id/ETcontactno"
+                android:hint="Mobile No"
+                android:inputType="phone"
+
+                android:padding="14dp"
+                android:background="@drawable/edittext_border"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:drawableStart="@drawable/ic_contact_phone_black_24dp"
+
                 android:paddingBottom="14dp"
                 android:drawablePadding="11dp"
                 android:textSize="16dp"
