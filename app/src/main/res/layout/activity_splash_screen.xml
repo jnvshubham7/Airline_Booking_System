@@ -35,7 +35,7 @@
         android:layout_marginBottom="0dp"
         android:gravity="center|center_horizontal"
         android:text="Airline Booking"
-        android:textColor="#E91E63"
+        android:textColor="@color/btn_register"
         android:textSize="34sp"
         android:textStyle="bold" />
 </RelativeLayout>

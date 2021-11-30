@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="Indirect Flights"
-        android:textColor="#FF5722"
+        android:textColor="#F44336"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/indirectflights"

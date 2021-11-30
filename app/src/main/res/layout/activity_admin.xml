@@ -136,6 +136,7 @@
         android:layout_marginTop="20dp"
         android:background="@color/btn_login_register"
 
+        android:padding="10dp"
         android:text="Add Flight"
         app:layout_constraintEnd_toStartOf="@+id/BTNdeleteflight"
         app:layout_constraintHorizontal_bias="0.5"
@@ -179,6 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/btn_login_register"
+        android:padding="10dp"
         android:text="Add Airport"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BTNdeleteairport"
@@ -195,6 +197,7 @@
 
         android:background="#F44336"
         android:layout_marginTop="20dp"
+        android:padding="10dp"
         android:text="Delete flight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -206,6 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete Airport"
+        android:padding="10dp"
         android:layout_marginTop="5dp"
         android:background="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
