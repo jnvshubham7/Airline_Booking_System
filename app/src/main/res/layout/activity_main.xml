@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#224662"
+    android:background="@color/colorPrimary"
     tools:context=".Main_Page">
 
 
@@ -12,7 +12,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#22A6CB"
+        android:background="#4CAF50"
+        android:padding="15dp"
         android:text="Search Flights"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button3"
@@ -23,7 +24,8 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#22A6CB"
+        android:background="#673AB7"
+        android:padding="15dp"
         android:text="View Bookings"
         app:layout_constraintBottom_toBottomOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +36,8 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#22A6CB"
+        android:background="#009688"
+        android:padding="15dp"
         android:text="Admin Access"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button2"
