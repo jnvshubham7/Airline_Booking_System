@@ -1,4 +1,4 @@
-# Airline_Booking_System
+# Airline Booking System
 
 
 ### Screenshots
