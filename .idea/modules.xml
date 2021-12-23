@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AIRLINE-BOOKING-SYSTEM.iml" filepath="$PROJECT_DIR$/.idea/modules/AIRLINE-BOOKING-SYSTEM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIRLINE-BOOKING-SYSTEM.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIRLINE-BOOKING-SYSTEM.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Airline_Booking_System.iml" filepath="$PROJECT_DIR$/.idea/modules/Airline_Booking_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.iml" />
     </modules>
   </component>
 </project>
