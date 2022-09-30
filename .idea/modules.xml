@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Airline_Booking_System.iml" filepath="$PROJECT_DIR$/.idea/modules/Airline_Booking_System.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Airline_Booking_System.app.unitTest.iml" />
     </modules>
   </component>
 </project>
