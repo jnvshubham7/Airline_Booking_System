@@ -103,8 +103,8 @@ Once the application is running on your device or emulator, you can sign up or s
 
 If you have any questions or would like to get in touch, please feel free to contact me:
 
-- **GitHub:** [yourusername](https://github.com/yourusername)
-- **LinkedIn:** [Your Name](https://www.linkedin.com/in/yourprofile)
-- **Email:** [youremail@example.com](mailto:youremail@example.com)
+- **GitHub:** [jnvshubham7](https://github.com/jnvshubham7)
+- **LinkedIn:** [Shubham Kumar Bhokta](https://www.linkedin.com/in/shubham-kumar-bhokta-97113116b)
+- **Email:** [jnvshubham7@gmail.com](mailto:jnvshubham7@gmail.com)
 
 Thank you for checking out the airline booking system!
